@@ -24,7 +24,7 @@ public class ClockDisplay
      */
     public ClockDisplay()
     {
-        hours = new NumberDisplay(24);
+        hours = new NumberDisplay(13);
         minutes = new NumberDisplay(60);
         updateDisplay();
     }
@@ -36,7 +36,7 @@ public class ClockDisplay
      */
     public ClockDisplay(int hour, int minute)
     {
-        hours = new NumberDisplay(24);
+        hours = new NumberDisplay(13);
         minutes = new NumberDisplay(60);
         setTime(hour, minute);
     }
@@ -48,9 +48,16 @@ public class ClockDisplay
     public void timeTick()
     {
         minutes.increment();
-        if(minutes.getValue() == 0) {  // it just rolled over!
+        if(minutes.getValue() == 0) 
+        {  // it just rolled over!
             hours.increment();
         }
+        
+        if (hours.getValue() == 0) 
+        {
+              hours.increment();
+        }
+            
         updateDisplay();
     }
 
