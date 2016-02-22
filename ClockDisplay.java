@@ -24,7 +24,7 @@ public class ClockDisplay
      */
     public ClockDisplay()
     {
-        hours = new NumberDisplay(13);
+        hours = new NumberDisplay(25);
         minutes = new NumberDisplay(60);
         updateDisplay();
     }
@@ -36,7 +36,7 @@ public class ClockDisplay
      */
     public ClockDisplay(int hour, int minute)
     {
-        hours = new NumberDisplay(13);
+        hours = new NumberDisplay(25);
         minutes = new NumberDisplay(60);
         setTime(hour, minute);
     }
@@ -85,7 +85,83 @@ public class ClockDisplay
      */
     private void updateDisplay()
     {
-        displayString = hours.getDisplayValue() + ":" + 
+        if (hours.getValue() == 0)
+        {
+            displayString = "01" + ":" + 
                         minutes.getDisplayValue();
+        } 
+        
+         else if(hours.getValue() == 13)
+        {
+             displayString = "01" + ":" + 
+                        minutes.getDisplayValue();
+        }
+       
+        else if(hours.getValue() == 14)
+        {
+             displayString = "02" + ":" + 
+                        minutes.getDisplayValue();
+        }
+        
+         else if(hours.getValue() == 15)
+        {
+             displayString = "03" + ":" + 
+                        minutes.getDisplayValue();
+        }
+        
+         else if(hours.getValue() == 16)
+        {
+             displayString = "04" + ":" + 
+                        minutes.getDisplayValue();
+        }
+        
+         else if(hours.getValue() == 17)
+        {
+             displayString = "05" + ":" + 
+                        minutes.getDisplayValue();
+        }
+        
+         else if(hours.getValue() == 18)
+        {
+             displayString = "07" + ":" + 
+                        minutes.getDisplayValue();
+        }
+        
+         else if(hours.getValue() == 19)
+        {
+             displayString = "02" + ":" + 
+                        minutes.getDisplayValue();
+        }
+        
+         else if(hours.getValue() == 20)
+        {
+             displayString = "08" + ":" + 
+                        minutes.getDisplayValue();
+        }
+        
+         else if(hours.getValue() == 21)
+        {
+             displayString = "09" + ":" + 
+                        minutes.getDisplayValue();
+        }
+        
+         else if(hours.getValue() == 22)
+        {
+             displayString = "10" + ":" + 
+                        minutes.getDisplayValue();
+        }
+        
+         else if(hours.getValue() == 23)
+        {
+             displayString = "12" + ":" + 
+                        minutes.getDisplayValue();
+        }
+        
+         else if(hours.getValue() == 24)
+        {
+             displayString = "12" + ":" + 
+                        minutes.getDisplayValue();
+        }     
+        
     }
 }
